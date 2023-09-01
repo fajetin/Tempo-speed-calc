@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Speed/Pace Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calc.js"></script>
+</head>
+<body>
+    
+    <div id="alertbox" class="alert">
+        <span id="alerttext">Testowy tekst alertowy</span>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    </div>
+    
+    <div class="contentcalc">
+        <div class="item"><span class="title">Kalkulator Tempo -> Prędkość</span></div>
+        <div class="break"></div>
+        <div class="item"><span class="itemtext">Podaj Tempo w formacie [min][sec] / [km]</span></div>
+        <div class="break"></div>
+        <div class="item">
+            <div class="mid">
+                <input id="min" type="number">
+                <input id="sec" type="number">
+                / [km]
+            </div>
+        </div>
+        <div class="break"></div>
+        <div class="item">
+            <div class="mid">
+                <input id="submittempo" type="submit" value="Konwertuj" onclick="calcspeed()">
+            </div>
+        </div>
+        <div class="break"></div>
+        <div class="mid">
+            <span class="itemtext">Twoja prędkość to: </span>
+            <span class="itemtext" id="speed">km/h</span>
+        </div>
+    </div>
+    
+    <div class="contentcalc">
+        <div class="item">
+            <span class="title">Kalkulator Prędkość -> Tempo</span>
+        </div>
+        <div class="break"></div>
+        <div class="item"><span class="itemtext">Podaj prędkość w formacie x.yz [km/h]</span></div>
+        <div class="break"></div>
+        <div class="item">
+            <div class="mid">
+                <input id="kmh" type="text"> [km/h]
+            </div>
+        </div>
+        <div class="break"></div>
+        <div class="item">
+            <div class="mid">
+                <input id="submitspeed" type="submit" value="Konwertuj" onclick="calctempo()">
+            </div>
+        </div>
+        <div class="break"></div>
+        <div class="mid">
+            <span class="itemtext">Twoje tempo to: </span>
+            <span class="itemtext" id="tempo">m s / km</span>
+        </div>
+    </div>    
+
+</body>
+</html>
